@@ -165,7 +165,7 @@ class SimpleLay extends PluginBase {
         $entity = $this->layData[strtolower($player->getName())]["entity"];
 
         $player->setInvisible(false);
-        $player->setImmobile(false);
+        $player->setNoClientPredictions(false);
         $player->setScale(1);
 
         $player->sendMessage(TextFormat::colorize($this->getConfig()->get("no-longer-lay-message", "&6You are no longer laying!")));
@@ -213,7 +213,7 @@ class SimpleLay extends PluginBase {
         ];
 
         $player->setInvisible();
-        $player->setImmobile();
+        $player->setNoClientPredictions();
         $player->setScale(0.01);
 
         $player->sendMessage(TextFormat::colorize($this->getConfig()->get("lay-message", "&6You are now laying!")));
